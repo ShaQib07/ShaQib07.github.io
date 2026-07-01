@@ -14,13 +14,36 @@ themeToggle.addEventListener('click', () => {
   try { localStorage.setItem('theme', next); } catch (e) {}
 });
 
-// Nav background on scroll
+// Nav background, scroll progress, active link
 const nav = document.getElementById('nav');
+const progress = document.getElementById('scrollProgress');
+const sections = Array.from(document.querySelectorAll('main section[id]'));
+const navAnchors = Array.from(document.querySelectorAll('.nav-links a'));
+
 const onScroll = () => {
-  nav.classList.toggle('scrolled', window.scrollY > 20);
+  const y = window.scrollY;
+  nav.classList.toggle('scrolled', y > 20);
+
+  // progress bar
+  const docH = document.documentElement.scrollHeight - window.innerHeight;
+  progress.style.width = (docH > 0 ? (y / docH) * 100 : 0) + '%';
+
+  // active section link
+  let current = sections[0] ? sections[0].id : '';
+  for (const sec of sections) {
+    if (y >= sec.offsetTop - 120) current = sec.id;
+  }
+  // near the bottom, force the last section active (it may sit past max scroll)
+  if (docH > 0 && y >= docH - 4 && sections.length) {
+    current = sections[sections.length - 1].id;
+  }
+  navAnchors.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
 };
 onScroll();
 window.addEventListener('scroll', onScroll, { passive: true });
+window.addEventListener('resize', onScroll, { passive: true });
 
 // Mobile nav toggle
 const navToggle = document.getElementById('navToggle');
