@@ -10,6 +10,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
+<script>
+  // Apply saved theme before paint to avoid flash. Default: dark.
+  (function () {
+    try {
+      if (localStorage.getItem('theme') === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    } catch (e) {}
+  })();
+</script>
 </head>
 <body>
 
@@ -29,6 +39,10 @@
       <a href="#contact">Contact</a>
     </nav>
     <a class="btn btn-sm nav-cta" href="#contact">Get in touch</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+      <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0-13a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V5a1 1 0 0 1 1-1Zm0 14a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1Zm8-6a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1ZM6 12a1 1 0 0 1-1 1H4a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1Zm11.66-5.66a1 1 0 0 1 0 1.41l-.71.71a1 1 0 1 1-1.41-1.41l.71-.71a1 1 0 0 1 1.41 0ZM8.46 15.54a1 1 0 0 1 0 1.41l-.71.71a1 1 0 0 1-1.41-1.41l.71-.71a1 1 0 0 1 1.41 0Zm9.2 1.41a1 1 0 0 1-1.41 0l-.71-.71a1 1 0 1 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41ZM8.46 8.46a1 1 0 0 1-1.41 0l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41Z"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M21.64 13a1 1 0 0 0-1.05-.14 8 8 0 0 1-9.45-9.45 1 1 0 0 0-1.19-1.19A10 10 0 1 0 22 14.05a1 1 0 0 0-.36-1.05Z"/></svg>
+    </button>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
@@ -48,9 +62,10 @@
         Senior Software Engineer <span class="divider">/</span> Mobile
       </h2>
       <p class="reveal hero-desc">
-        Senior Mobile Engineer with 6+ years of experience building and scaling mobile products used by
+        Senior Mobile Engineer with 7 years of experience building and scaling mobile products used by
         <strong>millions</strong>. Core expertise in Android (Kotlin, Jetpack Compose, Clean Architecture),
-        Kotlin Multiplatform, Flutter, and iOS. Shipped apps at 23M+ MAU scale, spoke at
+        with deep cross-platform range across Kotlin Multiplatform, Flutter, and iOS. I care as much about
+        <strong>user experience</strong> as I do about clean architecture. Shipped apps at 23M+ MAU scale, spoke at
         <strong>KotlinConf'23</strong>, and won <strong>MonstarHacks 2024</strong>.
       </p>
       <div class="reveal hero-actions">
@@ -61,7 +76,7 @@
         <a href="https://github.com/ShaQib07" target="_blank" rel="noopener" aria-label="GitHub">
           <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.53.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z"/></svg>
         </a>
-        <a href="https://www.linkedin.com/in/golam-shakibkhan" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/golam-shakib-khan" target="_blank" rel="noopener" aria-label="LinkedIn">
           <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
         </a>
         <a href="mailto:gsk.shakib.07@gmail.com" aria-label="Email">
@@ -79,22 +94,23 @@
       <h2 class="section-title reveal">Building mobile experiences at scale</h2>
       <div class="about-grid reveal">
         <p class="about-text">
-          I'm a Senior Mobile Engineer with over 6 years of experience designing, building, and scaling
-          mobile products used by millions of people every day. My core expertise spans native
-          <strong>Android</strong> development with Kotlin and Jetpack Compose, <strong>Kotlin Multiplatform (KMP)</strong>
-          for sharing business logic across platforms, <strong>Flutter</strong> for cross-platform delivery, and
-          native <strong>iOS</strong> development with Swift and SwiftUI.
+          I'm a Senior Mobile Engineer with 7 years of experience designing, building, and scaling
+          mobile products used by millions of people every day. My deepest expertise is native
+          <strong>Android</strong> with Kotlin and Jetpack Compose, backed by strong cross-platform range &mdash;
+          <strong>Kotlin Multiplatform (KMP)</strong> for sharing business logic, then
+          <strong>Flutter</strong> and native <strong>iOS</strong> (Swift, SwiftUI) for cross-platform delivery.
         </p>
         <p class="about-text">
           I've worked on apps operating at 23M+ monthly active user scale, led architecture and CI/CD
           decisions across cross-functional teams, and mentor engineers through code review and technical
-          guidance. I care deeply about clean architecture, developer experience, and shipping reliable
-          software &mdash; I spoke about it at <strong>KotlinConf'23</strong>, and won
+          guidance. I care deeply about clean architecture and about <strong>user experience</strong> &mdash;
+          building interfaces that feel fast, intuitive and polished &mdash; and about shipping reliable
+          software. I spoke about it at <strong>KotlinConf'23</strong>, and won
           <strong>MonstarHacks 2024</strong>, an AWS-partnered hackathon.
         </p>
         <div class="about-stats">
           <div class="stat-card">
-            <span class="stat-num">6+</span>
+            <span class="stat-num">7</span>
             <span class="stat-label">Years of Experience</span>
           </div>
           <div class="stat-card">
@@ -118,20 +134,51 @@
   <section class="section section-alt" id="skills">
     <div class="container">
       <p class="section-tag reveal">02 &mdash; Skills</p>
-      <h2 class="section-title reveal">Tools of the trade</h2>
+      <h2 class="section-title reveal">Platform expertise &amp; toolkit</h2>
+
+      <p class="skills-intro reveal">
+        My focus is native <strong>Android</strong> first, with strong cross-platform range. Here's roughly how
+        deep I go on each &mdash; ordered by proficiency.
+      </p>
+
+      <div class="expertise reveal">
+        <div class="expertise-row">
+          <div class="expertise-head">
+            <span class="expertise-name">Android <span class="expertise-sub">Kotlin &middot; Jetpack Compose</span></span>
+            <span class="expertise-level">Expert</span>
+          </div>
+          <div class="bar"><span style="width:95%"></span></div>
+        </div>
+        <div class="expertise-row">
+          <div class="expertise-head">
+            <span class="expertise-name">Kotlin Multiplatform <span class="expertise-sub">Shared business logic</span></span>
+            <span class="expertise-level">Advanced</span>
+          </div>
+          <div class="bar"><span style="width:82%"></span></div>
+        </div>
+        <div class="expertise-row">
+          <div class="expertise-head">
+            <span class="expertise-name">Flutter <span class="expertise-sub">Dart &middot; BLoC</span></span>
+            <span class="expertise-level">Proficient</span>
+          </div>
+          <div class="bar"><span style="width:70%"></span></div>
+        </div>
+        <div class="expertise-row">
+          <div class="expertise-head">
+            <span class="expertise-name">iOS <span class="expertise-sub">Swift &middot; SwiftUI</span></span>
+            <span class="expertise-level">Proficient</span>
+          </div>
+          <div class="bar"><span style="width:70%"></span></div>
+        </div>
+      </div>
+
+      <h3 class="skills-subtitle reveal">Tools of the trade</h3>
       <div class="skills-grid reveal">
 
         <div class="skill-card">
-          <h3>Primary</h3>
+          <h3>Android Core</h3>
           <div class="tags">
             <span>Kotlin</span><span>Android SDK</span><span>Jetpack Compose</span><span>Coroutines</span><span>Flow</span>
-          </div>
-        </div>
-
-        <div class="skill-card">
-          <h3>Platforms</h3>
-          <div class="tags">
-            <span>Android</span><span>KMP</span><span>Flutter</span><span>Dart</span><span>iOS</span><span>Swift</span><span>SwiftUI</span>
           </div>
         </div>
 
@@ -157,7 +204,7 @@
         </div>
 
         <div class="skill-card">
-          <h3>Data</h3>
+          <h3>Data &amp; Persistence</h3>
           <div class="tags">
             <span>Room</span><span>SQLite</span><span>DataStore</span><span>Drift</span><span>Realm</span>
           </div>
@@ -205,9 +252,10 @@
             </div>
             <p class="tl-company">Brain Station 23</p>
             <ul>
-              <li>Build and scale Android features for MyGP, Bangladesh's largest telecom super app (23M+ MAU, 4.4M DAU)</li>
-              <li>Reduced critical feature load time by ~50%</li>
+              <li>Build and scale Android features for Bangladesh's largest telecom + lifestyle super app (23M+ MAU, 4.4M DAU)</li>
+              <li>Reduced critical feature load time by ~50% and focused on smooth, intuitive UX for users at scale</li>
               <li>Maintained 99.3% crash-free stability in a multi-module production environment</li>
+              <li>Developed Mobile Sales Force Automation (SFA) apps for Android</li>
               <li>Developed, shipped, and actively maintain a Flutter app (insurance &amp; health domain) on Play Store and App Store</li>
               <li>Modernized legacy modules using Clean Architecture and Kotlin best practices</li>
               <li>Mentor junior engineers through code reviews and technical guidance</li>
@@ -228,7 +276,7 @@
               <li>Delivered real-time chat and audio/video calling via Twilio SDK (Mitsukoshi Isetan)</li>
               <li>Maintained ~99% crash-free rate, handled critical production incidents</li>
               <li>Owned mobile architecture and CI/CD decisions</li>
-              <li>Collaborated with 8&ndash;10 engineers in cross-functional Agile teams</li>
+              <li>Collaborated in cross-functional Agile teams</li>
             </ul>
           </div>
         </div>
@@ -266,9 +314,9 @@
             <span class="project-icon">📱</span>
             <span class="project-scale">23M+ MAU</span>
           </div>
-          <h3>MyGP</h3>
+          <h3>Telecom + Lifestyle Super App</h3>
           <p class="project-org">Brain Station 23</p>
-          <p>Bangladesh's largest telecom super app. Built and scaled Android features in a multi-module
+          <p>Bangladesh's largest telecom and lifestyle super app. Built and scaled Android features in a multi-module
              production environment, cutting critical feature load time by ~50% while keeping stability at 99.3% crash-free.</p>
           <div class="tags">
             <span>Kotlin</span><span>Jetpack Compose</span><span>Clean Architecture</span>
@@ -355,7 +403,7 @@
       </div>
       <div class="contact-links">
         <a href="https://github.com/ShaQib07" target="_blank" rel="noopener">GitHub &nearr;</a>
-        <a href="https://www.linkedin.com/in/golam-shakibkhan" target="_blank" rel="noopener">LinkedIn &nearr;</a>
+        <a href="https://www.linkedin.com/in/golam-shakib-khan" target="_blank" rel="noopener">LinkedIn &nearr;</a>
       </div>
     </div>
   </section>
