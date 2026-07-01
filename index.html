@@ -3,50 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Golam Shakib Khan | Senior Software Engineer (Mobile)</title>
-<meta name="description" content="Golam Shakib Khan - Senior Mobile Engineer specializing in Android, Kotlin Multiplatform, Flutter and iOS development.">
-<link rel="icon" href="data:,">
+<title>Golam Shakib Khan — Senior Mobile Engineer</title>
+<meta name="description" content="Golam Shakib Khan — Senior Mobile Engineer crafting Android, KMP, Flutter and iOS products used by millions.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 <script>
-  // Apply saved theme before paint to avoid flash. Default: dark.
   (function () {
-    try {
-      if (localStorage.getItem('theme') === 'light') {
-        document.documentElement.setAttribute('data-theme', 'light');
-      }
-    } catch (e) {}
+    try { if (localStorage.getItem('theme') === 'light') document.documentElement.setAttribute('data-theme', 'light'); } catch (e) {}
   })();
 </script>
 </head>
 <body>
 
 <div class="scroll-progress" id="scrollProgress"></div>
-<div class="bg-grid"></div>
-<div class="bg-glow"></div>
+<div class="grain"></div>
+<div class="cursor" id="cursor" aria-hidden="true"></div>
 
 <!-- Nav -->
 <header class="nav" id="nav">
-  <div class="container nav-inner">
-    <a href="#home" class="logo">GSK<span class="dot">.</span></a>
+  <div class="nav-inner">
+    <a href="#home" class="brand" data-cursor>
+      <span class="brand-mark">GSK</span>
+      <span class="brand-status"><i></i> Available</span>
+    </a>
     <nav class="nav-links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#achievements">Achievements</a>
-      <a href="#contact">Contact</a>
+      <a href="#work" data-cursor>Work</a>
+      <a href="#about" data-cursor>About</a>
+      <a href="#experience" data-cursor>Experience</a>
+      <a href="#contact" data-cursor>Contact</a>
     </nav>
-    <a class="btn btn-sm nav-cta" href="#contact">Get in touch</a>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme" title="Toggle theme">
-      <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0-13a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V5a1 1 0 0 1 1-1Zm0 14a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1Zm8-6a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1ZM6 12a1 1 0 0 1-1 1H4a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1Zm11.66-5.66a1 1 0 0 1 0 1.41l-.71.71a1 1 0 1 1-1.41-1.41l.71-.71a1 1 0 0 1 1.41 0ZM8.46 15.54a1 1 0 0 1 0 1.41l-.71.71a1 1 0 0 1-1.41-1.41l.71-.71a1 1 0 0 1 1.41 0Zm9.2 1.41a1 1 0 0 1-1.41 0l-.71-.71a1 1 0 1 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41ZM8.46 8.46a1 1 0 0 1-1.41 0l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41Z"/></svg>
-      <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M21.64 13a1 1 0 0 0-1.05-.14 8 8 0 0 1-9.45-9.45 1 1 0 0 0-1.19-1.19A10 10 0 1 0 22 14.05a1 1 0 0 0-.36-1.05Z"/></svg>
-    </button>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" data-cursor>
+        <svg class="icon-sun" viewBox="0 0 24 24" width="17" height="17"><path fill="currentColor" d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0-13a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V5a1 1 0 0 1 1-1Zm0 14a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1Zm8-6a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1ZM6 12a1 1 0 0 1-1 1H4a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1Zm11.66-5.66a1 1 0 0 1 0 1.41l-.71.71a1 1 0 1 1-1.41-1.41l.71-.71a1 1 0 0 1 1.41 0ZM8.46 15.54a1 1 0 0 1 0 1.41l-.71.71a1 1 0 0 1-1.41-1.41l.71-.71a1 1 0 0 1 1.41 0Zm9.2 1.41a1 1 0 0 1-1.41 0l-.71-.71a1 1 0 1 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41ZM8.46 8.46a1 1 0 0 1-1.41 0l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41Z"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="17" height="17"><path fill="currentColor" d="M21.64 13a1 1 0 0 0-1.05-.14 8 8 0 0 1-9.45-9.45 1 1 0 0 0-1.19-1.19A10 10 0 1 0 22 14.05a1 1 0 0 0-.36-1.05Z"/></svg>
+      </button>
+      <a href="#contact" class="btn btn-primary btn-sm" data-cursor>Let's talk</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span></button>
+    </div>
   </div>
 </header>
 
@@ -54,380 +50,331 @@
 
   <!-- Hero -->
   <section class="hero" id="home">
-    <div class="container hero-inner">
-      <div class="reveal hero-avatar">
-        <img src="assets/img/profile.jpg" alt="Golam Shakib Khan"
-             onerror="this.style.display='none';this.parentNode.classList.add('no-photo');">
-        <span class="avatar-fallback">GSK</span>
-      </div>
-      <p class="reveal hero-eyebrow"><span class="pulse"></span> Available for interesting mobile challenges</p>
-      <h1 class="reveal">
-        Hi, I'm <span class="text-gradient">Golam Shakib Khan</span>
-      </h1>
-      <h2 class="reveal hero-role">
-        Senior Software Engineer <span class="divider">/</span> Mobile
-      </h2>
-      <p class="reveal hero-desc">
-        Senior Mobile Engineer with 7 years of experience building and scaling mobile products used by
-        <strong>millions</strong>. Core expertise in Android (Kotlin, Jetpack Compose, Clean Architecture),
-        with deep cross-platform range across Kotlin Multiplatform, Flutter, and iOS. I care as much about
-        <strong>user experience</strong> as I do about clean architecture. Shipped apps at 23M+ MAU scale, spoke at
-        <strong>KotlinConf'23</strong>, and won <strong>MonstarHacks 2024</strong>.
-      </p>
-      <div class="reveal hero-actions">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="#contact" class="btn btn-outline">Contact Me</a>
-      </div>
-      <div class="reveal hero-socials">
-        <a href="https://github.com/ShaQib07" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.53.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/in/golam-shakib-khan" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
-        </a>
-        <a href="mailto:gsk.shakib.07@gmail.com" aria-label="Email">
-          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13Zm2.2.3 7.3 5.85a.8.8 0 0 0 1 0l7.3-5.85H4.2ZM20 7.4l-7.02 5.62a2.3 2.3 0 0 1-2.86 0L3.1 7.4V18h16.9V7.4Z"/></svg>
-        </a>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="pill reveal"><span class="ping"></span> Available for new projects</p>
+          <h1 class="reveal">
+            Golam<br>Shakib <span class="serif">Khan</span>
+          </h1>
+          <p class="hero-role reveal">Senior Software Engineer, Mobile</p>
+          <p class="hero-desc reveal">
+            I craft Android, Kotlin Multiplatform, Flutter &amp; iOS products used by
+            <span class="serif hl">millions</span> — with a deep care for clean architecture and delightful UX.
+          </p>
+          <div class="hero-actions reveal">
+            <a href="#work" class="btn btn-primary" data-cursor>View my work <span class="arr">↓</span></a>
+            <a href="#contact" class="btn btn-ghost" data-cursor>Get in touch</a>
+          </div>
+          <div class="hero-socials reveal">
+            <a href="https://github.com/ShaQib07" target="_blank" rel="noopener" data-cursor aria-label="GitHub">GitHub</a>
+            <a href="https://www.linkedin.com/in/golam-shakib-khan" target="_blank" rel="noopener" data-cursor aria-label="LinkedIn">LinkedIn</a>
+            <a href="mailto:gsk.shakib.07@gmail.com" data-cursor aria-label="Email">Email</a>
+          </div>
+        </div>
+        <div class="hero-photo reveal">
+          <div class="photo-frame">
+            <img src="assets/img/profile.jpg" alt="Golam Shakib Khan"
+                 onerror="this.style.display='none';this.parentNode.classList.add('no-photo');">
+            <span class="photo-fallback">GSK</span>
+          </div>
+          <div class="photo-badge photo-badge-1">7+ yrs<small>experience</small></div>
+          <div class="photo-badge photo-badge-2">Dhaka<small>Bangladesh 🇧🇩</small></div>
+        </div>
       </div>
     </div>
-    <a href="#about" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+
+    <!-- Marquee -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Kotlin</span><span class="sep">✦</span><span>Jetpack Compose</span><span class="sep">✦</span><span>Kotlin Multiplatform</span><span class="sep">✦</span><span>Flutter</span><span class="sep">✦</span><span>Swift / SwiftUI</span><span class="sep">✦</span><span>Clean Architecture</span><span class="sep">✦</span><span>Coroutines</span><span class="sep">✦</span>
+        <span>Kotlin</span><span class="sep">✦</span><span>Jetpack Compose</span><span class="sep">✦</span><span>Kotlin Multiplatform</span><span class="sep">✦</span><span>Flutter</span><span class="sep">✦</span><span>Swift / SwiftUI</span><span class="sep">✦</span><span>Clean Architecture</span><span class="sep">✦</span><span>Coroutines</span><span class="sep">✦</span>
+      </div>
+    </div>
   </section>
 
-  <!-- About -->
+  <!-- About (bento) -->
   <section class="section" id="about">
     <div class="container">
-      <p class="section-tag reveal">01 &mdash; About</p>
-      <h2 class="section-title reveal">Building mobile experiences at scale</h2>
-      <div class="about-grid reveal">
-        <p class="about-text">
-          I'm a Senior Mobile Engineer with 7 years of experience designing, building, and scaling
-          mobile products used by millions of people every day. My deepest expertise is native
-          <strong>Android</strong> with Kotlin and Jetpack Compose, backed by strong cross-platform range &mdash;
-          <strong>Kotlin Multiplatform (KMP)</strong> for sharing business logic, then
-          <strong>Flutter</strong> and native <strong>iOS</strong> (Swift, SwiftUI) for cross-platform delivery.
-        </p>
-        <p class="about-text">
-          I've worked on apps operating at 23M+ monthly active user scale, led architecture and CI/CD
-          decisions across cross-functional teams, and mentor engineers through code review and technical
-          guidance. I care deeply about clean architecture and about <strong>user experience</strong> &mdash;
-          building interfaces that feel fast, intuitive and polished &mdash; and about shipping reliable
-          software. I spoke about it at <strong>KotlinConf'23</strong>, and won
-          <strong>MonstarHacks 2024</strong>, an AWS-partnered hackathon.
-        </p>
-        <div class="about-stats">
-          <div class="stat-card">
-            <span class="stat-num">7</span>
-            <span class="stat-label">Years of Experience</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-num">23M+</span>
-            <span class="stat-label">MAU Products Shipped</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-num">99.3%</span>
-            <span class="stat-label">Crash-Free Sessions</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-num">4</span>
-            <span class="stat-label">Platforms Mastered</span>
+      <div class="section-head reveal">
+        <span class="section-idx">01</span>
+        <h2 class="section-title">About <span class="serif">me</span></h2>
+      </div>
+
+      <div class="bento reveal">
+        <div class="bento-card bento-bio">
+          <p>
+            I'm a Senior Mobile Engineer with <strong>7 years</strong> of experience building and scaling
+            products used by millions every day. Native <strong>Android</strong> (Kotlin, Jetpack Compose) is
+            home base, backed by strong cross-platform range across <strong>KMP</strong>, <strong>Flutter</strong>
+            and <strong>iOS</strong>.
+          </p>
+          <p>
+            I care as much about <span class="serif hl">user experience</span> as I do about clean architecture —
+            shipping software that feels fast, intuitive and reliable. I spoke at KotlinConf'23 and won
+            MonstarHacks 2024.
+          </p>
+        </div>
+
+        <div class="bento-card bento-stat">
+          <span class="stat-num">23M+</span>
+          <span class="stat-label">Monthly active users reached</span>
+        </div>
+        <div class="bento-card bento-stat">
+          <span class="stat-num">99.3%</span>
+          <span class="stat-label">Crash-free stability</span>
+        </div>
+
+        <div class="bento-card bento-now">
+          <span class="mini-label"><i class="dot-live"></i> Currently</span>
+          <h3>Senior Software Engineer</h3>
+          <p>Brain Station 23 · building at national telecom scale</p>
+        </div>
+
+        <div class="bento-card bento-stat">
+          <span class="stat-num">4</span>
+          <span class="stat-label">Platforms shipped to</span>
+        </div>
+        <div class="bento-card bento-values">
+          <span class="mini-label">Focus</span>
+          <div class="chips">
+            <span>UX</span><span>Clean Architecture</span><span>Performance</span><span>Mentorship</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Skills -->
-  <section class="section section-alt" id="skills">
+  <!-- Stack / expertise -->
+  <section class="section section-tint" id="stack">
     <div class="container">
-      <p class="section-tag reveal">02 &mdash; Skills</p>
-      <h2 class="section-title reveal">Platform expertise &amp; toolkit</h2>
-
-      <p class="skills-intro reveal">
-        Native <strong>Android</strong> is home base, backed by strong cross-platform range. Here's how deep I go
-        on each platform &mdash; ordered by proficiency.
-      </p>
+      <div class="section-head reveal">
+        <span class="section-idx">02</span>
+        <h2 class="section-title">Platform <span class="serif">expertise</span></h2>
+      </div>
+      <p class="section-lead reveal">Native Android first, with strong cross-platform range — ordered by depth.</p>
 
       <div class="expertise-grid reveal">
-
-        <article class="xp-card" style="--xp:#22c55e; --xp2:#4ade80;">
-          <div class="ring" style="--val:95;">
-            <div class="ring-inner"><b>95</b><i>%</i></div>
-          </div>
-          <div class="xp-meta">
-            <span class="xp-badge">Expert</span>
-            <h3>Android</h3>
-            <p>Kotlin &middot; Jetpack Compose</p>
-          </div>
+        <article class="xp-card" style="--xp:#bef264;">
+          <div class="ring" style="--val:95;"><div class="ring-inner"><b>95</b><i>%</i></div></div>
+          <span class="xp-badge">Expert</span>
+          <h3>Android</h3>
+          <p>Kotlin · Jetpack Compose</p>
         </article>
-
-        <article class="xp-card" style="--xp:#a78bfa; --xp2:#c4b5fd;">
-          <div class="ring" style="--val:82;">
-            <div class="ring-inner"><b>82</b><i>%</i></div>
-          </div>
-          <div class="xp-meta">
-            <span class="xp-badge">Advanced</span>
-            <h3>Kotlin Multiplatform</h3>
-            <p>Shared business logic</p>
-          </div>
+        <article class="xp-card" style="--xp:#a78bfa;">
+          <div class="ring" style="--val:82;"><div class="ring-inner"><b>82</b><i>%</i></div></div>
+          <span class="xp-badge">Advanced</span>
+          <h3>Kotlin Multiplatform</h3>
+          <p>Shared business logic</p>
         </article>
-
-        <article class="xp-card" style="--xp:#38bdf8; --xp2:#7dd3fc;">
-          <div class="ring" style="--val:70;">
-            <div class="ring-inner"><b>70</b><i>%</i></div>
-          </div>
-          <div class="xp-meta">
-            <span class="xp-badge">Proficient</span>
-            <h3>Flutter</h3>
-            <p>Dart &middot; BLoC</p>
-          </div>
+        <article class="xp-card" style="--xp:#38bdf8;">
+          <div class="ring" style="--val:70;"><div class="ring-inner"><b>70</b><i>%</i></div></div>
+          <span class="xp-badge">Proficient</span>
+          <h3>Flutter</h3>
+          <p>Dart · BLoC</p>
         </article>
-
-        <article class="xp-card" style="--xp:#e879f9; --xp2:#f0abfc;">
-          <div class="ring" style="--val:70;">
-            <div class="ring-inner"><b>70</b><i>%</i></div>
-          </div>
-          <div class="xp-meta">
-            <span class="xp-badge">Proficient</span>
-            <h3>iOS</h3>
-            <p>Swift &middot; SwiftUI</p>
-          </div>
+        <article class="xp-card" style="--xp:#f472b6;">
+          <div class="ring" style="--val:70;"><div class="ring-inner"><b>70</b><i>%</i></div></div>
+          <span class="xp-badge">Proficient</span>
+          <h3>iOS</h3>
+          <p>Swift · SwiftUI</p>
         </article>
-
       </div>
 
-      <div class="skills-divider reveal"><span>Tools of the trade</span></div>
-
-      <div class="skills-grid reveal">
-
-        <div class="skill-card">
-          <h3><span class="dot-icon"></span>Android Core</h3>
-          <div class="tags">
-            <span>Kotlin</span><span>Android SDK</span><span>Jetpack Compose</span><span>Coroutines</span><span>Flow</span>
-          </div>
+      <div class="stack-groups reveal">
+        <div class="stack-col">
+          <span class="mini-label">Android core</span>
+          <div class="chips"><span>Kotlin</span><span>Android SDK</span><span>Compose</span><span>Coroutines</span><span>Flow</span></div>
         </div>
-
-        <div class="skill-card">
-          <h3><span class="dot-icon"></span>Architecture</h3>
-          <div class="tags">
-            <span>Clean Architecture</span><span>MVI</span><span>MVVM</span><span>MVP</span>
-          </div>
+        <div class="stack-col">
+          <span class="mini-label">Architecture</span>
+          <div class="chips"><span>Clean Arch</span><span>MVI</span><span>MVVM</span><span>MVP</span></div>
         </div>
-
-        <div class="skill-card">
-          <h3><span class="dot-icon"></span>Dependency Injection</h3>
-          <div class="tags">
-            <span>Hilt</span><span>Koin</span><span>Dagger2</span><span>get_it</span><span>injectable</span>
-          </div>
+        <div class="stack-col">
+          <span class="mini-label">DI</span>
+          <div class="chips"><span>Hilt</span><span>Koin</span><span>Dagger2</span><span>get_it</span><span>injectable</span></div>
         </div>
-
-        <div class="skill-card">
-          <h3><span class="dot-icon"></span>Networking</h3>
-          <div class="tags">
-            <span>Retrofit</span><span>OkHttp</span><span>Ktor</span><span>Moya</span>
-          </div>
+        <div class="stack-col">
+          <span class="mini-label">Networking</span>
+          <div class="chips"><span>Retrofit</span><span>OkHttp</span><span>Ktor</span><span>Moya</span></div>
         </div>
-
-        <div class="skill-card">
-          <h3><span class="dot-icon"></span>Data &amp; Persistence</h3>
-          <div class="tags">
-            <span>Room</span><span>SQLite</span><span>DataStore</span><span>Drift</span><span>Realm</span>
-          </div>
+        <div class="stack-col">
+          <span class="mini-label">Data</span>
+          <div class="chips"><span>Room</span><span>SQLite</span><span>DataStore</span><span>Drift</span><span>Realm</span></div>
         </div>
-
-        <div class="skill-card">
-          <h3><span class="dot-icon"></span>Flutter Ecosystem</h3>
-          <div class="tags">
-            <span>flutter_bloc</span><span>Cubit</span><span>Freezed</span><span>auto_route</span><span>FVM</span>
-          </div>
+        <div class="stack-col">
+          <span class="mini-label">Flutter</span>
+          <div class="chips"><span>flutter_bloc</span><span>Cubit</span><span>Freezed</span><span>auto_route</span><span>FVM</span></div>
         </div>
-
-        <div class="skill-card">
-          <h3><span class="dot-icon"></span>Testing</h3>
-          <div class="tags">
-            <span>JUnit</span><span>Mockito</span><span>MockK</span><span>Espresso</span>
-          </div>
+        <div class="stack-col">
+          <span class="mini-label">Testing</span>
+          <div class="chips"><span>JUnit</span><span>Mockito</span><span>MockK</span><span>Espresso</span></div>
         </div>
-
-        <div class="skill-card">
-          <h3><span class="dot-icon"></span>CI/CD &amp; Tooling</h3>
-          <div class="tags">
-            <span>Bitrise</span><span>GitHub Actions</span><span>Firebase</span><span>LeakCanary</span>
-          </div>
+        <div class="stack-col">
+          <span class="mini-label">CI/CD</span>
+          <div class="chips"><span>Bitrise</span><span>GitHub Actions</span><span>Firebase</span><span>LeakCanary</span></div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work / projects -->
+  <section class="section" id="work">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-idx">03</span>
+        <h2 class="section-title">Selected <span class="serif">work</span></h2>
+      </div>
+
+      <div class="work-grid">
+
+        <article class="work-card reveal" data-cursor style="--c1:#134e4a;--c2:#0f766e;">
+          <div class="work-cover">
+            <span class="work-emoji">📱</span>
+            <span class="work-scale">23M+ MAU</span>
+          </div>
+          <div class="work-body">
+            <div class="work-titles">
+              <h3>Telecom + Lifestyle Super App</h3>
+              <span class="work-org">Brain Station 23</span>
+            </div>
+            <p>Bangladesh's largest telecom &amp; lifestyle super app. Built and scaled Android features in a
+               multi-module production environment — cutting critical feature load time by ~50% while holding
+               99.3% crash-free stability.</p>
+            <div class="chips"><span>Kotlin</span><span>Compose</span><span>Clean Architecture</span></div>
+          </div>
+        </article>
+
+        <article class="work-card reveal" data-cursor style="--c1:#1e3a8a;--c2:#3730a3;">
+          <div class="work-cover">
+            <span class="work-emoji">💬</span>
+            <span class="work-scale">Real-time</span>
+          </div>
+          <div class="work-body">
+            <div class="work-titles">
+              <h3>Mitsukoshi Isetan</h3>
+              <span class="work-org">Monstarlab</span>
+            </div>
+            <p>Global retail app with real-time chat and audio/video calling via the Twilio SDK. Led KMP
+               development to share business logic across Android and iOS, maintaining a ~99% crash-free rate.</p>
+            <div class="chips"><span>KMP</span><span>Twilio SDK</span><span>iOS</span><span>Android</span></div>
+          </div>
+        </article>
+
+        <article class="work-card reveal" data-cursor style="--c1:#3f1d38;--c2:#6d28d9;">
+          <div class="work-cover">
+            <span class="work-emoji">🏥</span>
+            <span class="work-scale">Cross-platform</span>
+          </div>
+          <div class="work-body">
+            <div class="work-titles">
+              <h3>Health &amp; Insurance App</h3>
+              <span class="work-org">Brain Station 23</span>
+            </div>
+            <p>End-to-end Flutter app in the insurance and health domain — developed, shipped and actively
+               maintained on both the Play Store and App Store.</p>
+            <div class="chips"><span>Flutter</span><span>BLoC</span><span>Drift</span><span>Freezed</span></div>
+          </div>
+        </article>
+
+        <article class="work-card reveal" data-cursor style="--c1:#3f2d10;--c2:#a16207;">
+          <div class="work-cover">
+            <span class="work-emoji">🎮</span>
+            <span class="work-scale">Server-driven</span>
+          </div>
+          <div class="work-body">
+            <div class="work-titles">
+              <h3>Gamified Rewards Platform</h3>
+              <span class="work-org">IOTA Infotech</span>
+            </div>
+            <p>A gamified digital rewards platform — spin wheel, daily login and membership tiers — with
+               server-driven UI for dynamic rollout and NDK-based security hardening.</p>
+            <div class="chips"><span>Android</span><span>Server-driven UI</span><span>ProGuard/R8</span></div>
+          </div>
+        </article>
 
       </div>
     </div>
   </section>
 
   <!-- Experience -->
-  <section class="section" id="experience">
+  <section class="section section-tint" id="experience">
     <div class="container">
-      <p class="section-tag reveal">03 &mdash; Experience</p>
-      <h2 class="section-title reveal">Where I've worked</h2>
+      <div class="section-head reveal">
+        <span class="section-idx">04</span>
+        <h2 class="section-title">Experience <span class="serif">&amp; recognition</span></h2>
+      </div>
 
-      <div class="timeline reveal">
-
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-content">
-            <div class="tl-head">
-              <h3>Senior Software Engineer</h3>
-              <span class="tl-date">May 2025 &mdash; Present</span>
-            </div>
-            <p class="tl-company">Brain Station 23</p>
+      <div class="exp-list">
+        <article class="exp-row reveal" data-cursor>
+          <div class="exp-when"><span class="exp-dates">2025 — Now</span></div>
+          <div class="exp-main">
+            <h3>Senior Software Engineer <span class="exp-co">· Brain Station 23</span></h3>
             <ul>
               <li>Build and scale Android features for Bangladesh's largest telecom + lifestyle super app (23M+ MAU, 4.4M DAU)</li>
-              <li>Reduced critical feature load time by ~50% and focused on smooth, intuitive UX for users at scale</li>
+              <li>Reduced critical feature load time by ~50% with a focus on smooth, intuitive UX at scale</li>
               <li>Maintained 99.3% crash-free stability in a multi-module production environment</li>
               <li>Developed Mobile Sales Force Automation (SFA) apps for Android</li>
-              <li>Developed, shipped, and actively maintain a Flutter app (insurance &amp; health domain) on Play Store and App Store</li>
-              <li>Modernized legacy modules using Clean Architecture and Kotlin best practices</li>
+              <li>Shipped and maintain a Flutter health &amp; insurance app on the Play Store and App Store</li>
               <li>Mentor junior engineers through code reviews and technical guidance</li>
             </ul>
           </div>
-        </div>
+        </article>
 
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-content">
-            <div class="tl-head">
-              <h3>Mobile Engineer II</h3>
-              <span class="tl-date">Jan 2021 &mdash; May 2025</span>
-            </div>
-            <p class="tl-company">Monstarlab</p>
+        <article class="exp-row reveal" data-cursor>
+          <div class="exp-when"><span class="exp-dates">2021 — 2025</span></div>
+          <div class="exp-main">
+            <h3>Mobile Engineer II <span class="exp-co">· Monstarlab</span></h3>
             <ul>
               <li>Led KMP development sharing business logic across Android and iOS</li>
               <li>Delivered real-time chat and audio/video calling via Twilio SDK (Mitsukoshi Isetan)</li>
-              <li>Maintained ~99% crash-free rate, handled critical production incidents</li>
-              <li>Owned mobile architecture and CI/CD decisions</li>
-              <li>Collaborated in cross-functional Agile teams</li>
+              <li>Maintained ~99% crash-free rate and handled critical production incidents</li>
+              <li>Owned mobile architecture and CI/CD decisions in cross-functional Agile teams</li>
             </ul>
           </div>
-        </div>
+        </article>
 
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-content">
-            <div class="tl-head">
-              <h3>Android Developer</h3>
-              <span class="tl-date">Mar 2020 &mdash; Dec 2020</span>
-            </div>
-            <p class="tl-company">IOTA Infotech</p>
+        <article class="exp-row reveal" data-cursor>
+          <div class="exp-when"><span class="exp-dates">2020</span></div>
+          <div class="exp-main">
+            <h3>Android Developer <span class="exp-co">· IOTA Infotech</span></h3>
             <ul>
-              <li>Built a gamified digital rewards platform (spin wheel, daily login, membership tiers: Silver/Gold)</li>
+              <li>Built a gamified digital rewards platform (spin wheel, daily login, membership tiers)</li>
               <li>Implemented server-driven UI for dynamic feature rollout</li>
               <li>Applied security hardening: ProGuard/R8, BuildConfig, NDK-based key protection</li>
             </ul>
           </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section class="section section-alt" id="projects">
-    <div class="container">
-      <p class="section-tag reveal">04 &mdash; Projects</p>
-      <h2 class="section-title reveal">Selected work</h2>
-
-      <div class="projects-grid reveal">
-
-        <article class="project-card">
-          <div class="project-top">
-            <span class="project-icon">📱</span>
-            <span class="project-scale">23M+ MAU</span>
-          </div>
-          <h3>Telecom + Lifestyle Super App</h3>
-          <p class="project-org">Brain Station 23</p>
-          <p>Bangladesh's largest telecom and lifestyle super app. Built and scaled Android features in a multi-module
-             production environment, cutting critical feature load time by ~50% while keeping stability at 99.3% crash-free.</p>
-          <div class="tags">
-            <span>Kotlin</span><span>Jetpack Compose</span><span>Clean Architecture</span>
-          </div>
         </article>
-
-        <article class="project-card">
-          <div class="project-top">
-            <span class="project-icon">💬</span>
-            <span class="project-scale">Real-time</span>
-          </div>
-          <h3>Mitsukoshi Isetan</h3>
-          <p class="project-org">Monstarlab</p>
-          <p>Global retail app with real-time chat and audio/video calling powered by the Twilio SDK.
-             Led KMP development to share business logic across Android and iOS, maintaining ~99% crash-free rate.</p>
-          <div class="tags">
-            <span>KMP</span><span>Twilio SDK</span><span>iOS</span><span>Android</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-top">
-            <span class="project-icon">🏥</span>
-            <span class="project-scale">Cross-platform</span>
-          </div>
-          <h3>Flutter Health &amp; Insurance App</h3>
-          <p class="project-org">Brain Station 23</p>
-          <p>End-to-end Flutter app in the insurance and health domain, developed, shipped and actively
-             maintained on both the Play Store and App Store.</p>
-          <div class="tags">
-            <span>Flutter</span><span>BLoC</span><span>Drift</span><span>Freezed</span><span>auto_route</span>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Achievements -->
-  <section class="section" id="achievements">
-    <div class="container">
-      <p class="section-tag reveal">05 &mdash; Achievements</p>
-      <h2 class="section-title reveal">Recognition</h2>
-
-      <div class="achievements-grid reveal">
-        <div class="achievement-card">
-          <span class="achievement-icon">🏆</span>
-          <h3>MonstarHacks 2024 Champion</h3>
-          <p>Won first place at MonstarHacks 2024, an AWS-partnered hackathon.</p>
-        </div>
-        <div class="achievement-card">
-          <span class="achievement-icon">🏅</span>
-          <h3>Do What's Right Award 2023</h3>
-          <p>Recognized at Monstarlab for embodying integrity and ownership in engineering work.</p>
-        </div>
-        <div class="achievement-card">
-          <span class="achievement-icon">🎤</span>
-          <h3>Speaker at KotlinConf'23</h3>
-          <p>Shared insights on Kotlin and mobile engineering at KotlinConf'23, Brac University.</p>
-        </div>
       </div>
 
-      <div class="education-card reveal">
-        <span class="education-icon">🎓</span>
-        <div>
-          <h3>BSc in Information Technology</h3>
-          <p>Jahangirnagar University &middot; 2015 &ndash; 2019</p>
-        </div>
+      <div class="awards reveal">
+        <div class="award-card" data-cursor><span class="award-ic">🏆</span><div><h4>MonstarHacks 2024 Champion</h4><p>AWS-partnered hackathon</p></div></div>
+        <div class="award-card" data-cursor><span class="award-ic">🏅</span><div><h4>Do What's Right Award '23</h4><p>Monstarlab</p></div></div>
+        <div class="award-card" data-cursor><span class="award-ic">🎤</span><div><h4>Speaker · KotlinConf'23</h4><p>Brac University</p></div></div>
+        <div class="award-card" data-cursor><span class="award-ic">🎓</span><div><h4>BSc in IT</h4><p>Jahangirnagar University</p></div></div>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section class="section" id="contact">
-    <div class="container contact-inner reveal">
-      <p class="section-tag">06 &mdash; Contact</p>
-      <h2 class="section-title">Let's build something great</h2>
-      <p class="contact-desc">
-        I'm always open to discussing mobile architecture, interesting products, speaking opportunities,
-        or just talking Kotlin. Reach out &mdash; I usually reply within a day.
-      </p>
-      <div class="contact-actions">
-        <a href="mailto:gsk.shakib.07@gmail.com" class="btn btn-primary">gsk.shakib.07@gmail.com</a>
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact-inner reveal">
+        <span class="mini-label"><i class="dot-live"></i> Available for work</span>
+        <h2 class="contact-head">Let's build something <span class="serif">great</span> together.</h2>
+        <a href="mailto:gsk.shakib.07@gmail.com" class="contact-mail" data-cursor>gsk.shakib.07@gmail.com</a>
+        <div class="contact-links">
+          <a href="https://github.com/ShaQib07" target="_blank" rel="noopener" data-cursor>GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/golam-shakib-khan" target="_blank" rel="noopener" data-cursor>LinkedIn ↗</a>
+          <a href="mailto:gsk.shakib.07@gmail.com" data-cursor>Email ↗</a>
+        </div>
       </div>
-      <div class="contact-links">
-        <a href="https://github.com/ShaQib07" target="_blank" rel="noopener">GitHub &nearr;</a>
-        <a href="https://www.linkedin.com/in/golam-shakib-khan" target="_blank" rel="noopener">LinkedIn &nearr;</a>
+    </div>
+
+    <div class="marquee marquee-lg" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="serif">Let's talk</span><span class="sep">✦</span><span class="serif">Get in touch</span><span class="sep">✦</span><span class="serif">Let's talk</span><span class="sep">✦</span><span class="serif">Get in touch</span><span class="sep">✦</span>
+        <span class="serif">Let's talk</span><span class="sep">✦</span><span class="serif">Get in touch</span><span class="sep">✦</span><span class="serif">Let's talk</span><span class="sep">✦</span><span class="serif">Get in touch</span><span class="sep">✦</span>
       </div>
     </div>
   </section>
@@ -436,8 +383,9 @@
 
 <footer class="footer">
   <div class="container footer-inner">
-    <p>&copy; <span id="year"></span> Golam Shakib Khan. Built with HTML, CSS &amp; JS.</p>
-    <a href="#home" class="back-to-top">Back to top &uarr;</a>
+    <p>© <span id="year"></span> Golam Shakib Khan</p>
+    <p class="footer-made">Built with HTML, CSS &amp; JS</p>
+    <a href="#home" class="back-to-top" data-cursor>Back to top ↑</a>
   </div>
 </footer>
 
