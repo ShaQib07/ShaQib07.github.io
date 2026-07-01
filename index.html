@@ -23,6 +23,7 @@
 </head>
 <body>
 
+<div class="scroll-progress" id="scrollProgress"></div>
 <div class="bg-grid"></div>
 <div class="bg-glow"></div>
 
@@ -54,6 +55,11 @@
   <!-- Hero -->
   <section class="hero" id="home">
     <div class="container hero-inner">
+      <div class="reveal hero-avatar">
+        <img src="assets/img/profile.jpg" alt="Golam Shakib Khan"
+             onerror="this.style.display='none';this.parentNode.classList.add('no-photo');">
+        <span class="avatar-fallback">GSK</span>
+      </div>
       <p class="reveal hero-eyebrow"><span class="pulse"></span> Available for interesting mobile challenges</p>
       <h1 class="reveal">
         Hi, I'm <span class="text-gradient">Golam Shakib Khan</span>

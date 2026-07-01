@@ -185,6 +185,7 @@ code, .mono { font-family: 'JetBrains Mono', monospace; }
   transition: color 0.2s ease;
 }
 .nav-links a:hover { color: var(--text); }
+.nav-links a.active { color: var(--text); }
 .nav-links a::after {
   content: '';
   position: absolute;
@@ -193,7 +194,20 @@ code, .mono { font-family: 'JetBrains Mono', monospace; }
   background: var(--accent);
   transition: width 0.25s ease;
 }
-.nav-links a:hover::after { width: 100%; }
+.nav-links a:hover::after,
+.nav-links a.active::after { width: 100%; }
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 0;
+  z-index: 200;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3));
+  box-shadow: 0 0 10px color-mix(in srgb, var(--accent) 50%, transparent);
+  transition: width 0.1s linear;
+}
 
 .nav-toggle {
   display: none;
@@ -250,6 +264,63 @@ code, .mono { font-family: 'JetBrains Mono', monospace; }
 .hero-inner {
   text-align: center;
   max-width: 780px;
+}
+
+/* Hero avatar */
+.hero-avatar {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  padding: 5px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  isolation: isolate;
+}
+.hero-avatar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, var(--accent), var(--accent-2), var(--accent-3), var(--accent));
+  animation: avatarSpin 6s linear infinite;
+  z-index: -1;
+}
+.hero-avatar::after {
+  content: '';
+  position: absolute;
+  inset: -16px;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 24%, transparent), transparent 68%);
+  filter: blur(8px);
+  z-index: -2;
+}
+.hero-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--surface);
+}
+.avatar-fallback {
+  display: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: var(--text);
+  background: linear-gradient(150deg, var(--surface-hover), var(--bg-alt));
+}
+.hero-avatar.no-photo .avatar-fallback { display: flex; }
+@keyframes avatarSpin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .hero-avatar::before { animation: none; }
 }
 
 .hero-eyebrow {
