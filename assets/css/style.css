@@ -249,12 +249,11 @@ img { max-width: 100%; display: block; }
 }
 
 /* ============ About bento ============ */
-.bento {
-  margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
-  align-items: start;
-}
-.bento-col { display: flex; flex-direction: column; gap: 16px; }
+.bento { margin-top: 40px; display: flex; flex-direction: column; gap: 16px; }
+.bento-top { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: stretch; }
+.bento-right { display: flex; flex-direction: column; gap: 16px; }
 .bento-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.bento-bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .bento-card {
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
   padding: 28px; transition: transform 0.3s ease, border-color 0.3s ease;
@@ -266,9 +265,11 @@ img { max-width: 100%; display: block; }
 .bento-stat { display: flex; flex-direction: column; gap: 8px; padding: 24px; }
 .stat-num { font-size: 2.1rem; font-weight: 700; letter-spacing: -1px; color: var(--accent); font-family: 'JetBrains Mono', monospace; }
 .stat-label { font-size: 0.8rem; color: var(--text-dim); }
+/* Focus grows to fill the right column so it lines up with the description tile */
+.bento-values { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.bento-values .chips { margin-top: 14px; }
 .bento-now h3 { font-size: 1.25rem; margin: 12px 0 4px; }
 .bento-now p { color: var(--text-dim); font-size: 0.92rem; }
-.bento-values .chips { margin-top: 14px; }
 
 /* ============ Expertise rings ============ */
 .expertise-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 56px; }
@@ -432,12 +433,11 @@ img { max-width: 100%; display: block; }
   .brand-status { display: none; }
   .section { padding: 90px 0; }
   .exp-row { grid-template-columns: 1fr; gap: 12px; }
-  .bento { grid-template-columns: 1fr; }
+  .bento-top, .bento-bottom { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 520px) {
   .container { padding: 0 18px; }
-  .bento { grid-template-columns: 1fr; }
   .expertise-grid, .stack-groups, .awards { grid-template-columns: 1fr; }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; justify-content: center; }
