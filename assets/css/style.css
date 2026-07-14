@@ -364,10 +364,10 @@ img { max-width: 100%; display: block; }
   content: ''; position: absolute; left: -26px; top: 5px; width: 10px; height: 10px;
   border-radius: 50%; background: var(--bg-alt); border: 2px solid var(--accent);
 }
-/* Connector runs from this dot's center to the next dot's center */
+/* Connector fills the gap between this dot's bottom edge and the next dot's top edge */
 .role-step:not(:last-child)::after {
-  content: ''; position: absolute; left: -22px; top: 10px; bottom: -10px; width: 2px;
-  background: linear-gradient(var(--accent), color-mix(in srgb, var(--accent) 45%, transparent));
+  content: ''; position: absolute; left: -20px; top: 19px; bottom: -5px; width: 2px;
+  background: linear-gradient(var(--accent), color-mix(in srgb, var(--accent) 55%, transparent));
 }
 .role-step:first-child::before { background: var(--accent); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent); }
 .role-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
