@@ -93,7 +93,6 @@ MonstarHacks 2024 champion.
 - **MyGP** (Brain Station 23) — Bangladesh's largest telecom & lifestyle super app, 23M+ MAU. Built/scaled Android features in a multi-module production environment; cut critical feature load time ~50% while holding 99.3% crash-free. *Kotlin, Compose, Clean Architecture.*
 - **Mitsukoshi Isetan** (Monstarlab) — Global retail app; delivered real-time chat and audio/video calling via the Twilio SDK for a worldwide user base, ~99% crash-free. *Twilio SDK, Android, iOS, Real-time.*
 - **Shanta Life Insurance** (Brain Station 23) — End-to-end Flutter app in the insurance & health domain, shipped and maintained on Play Store and App Store. *Flutter, BLoC, Drift, Freezed.*
-- **Goubba** (IOTA Infotech) — Gamified digital rewards platform (spin wheel, daily login, membership tiers) with server-driven UI and NDK-based security hardening. *Android, Server-driven UI, ProGuard/R8.*
 
 ## Awards & Recognition
 - **MonstarHacks 2024 Champion** — AWS-partnered hackathon
