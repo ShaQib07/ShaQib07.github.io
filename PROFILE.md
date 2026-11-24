@@ -44,9 +44,16 @@ MonstarHacks 2024 champion.
 
 ## Work Experience
 
-### Brain Station 23 — Contract · Dhaka, Bangladesh (2025 — Present)
+### Dynamic Solution Innovators (DSi) — Full-time · Dhaka, Bangladesh (Sep 2026 — Present)
 
-**Senior Software Engineer II** (May 2026 — Present)
+**Senior Software Engineer** (Sep 2026 — Present)
+- Building **NID Wallet**, a national digital identity wallet serving a very large user base with the highest security and privacy requirements
+- Implemented **hardware-backed attestation** to verify device and key integrity, hardening the app against tampering for maximum security
+- Driving secure mobile architecture decisions for a mission-critical, high-scale production application
+
+### Brain Station 23 — Contract · Dhaka, Bangladesh (May 2025 — Sep 2026)
+
+**Senior Software Engineer II** (May 2026 — Sep 2026)
 - Led development of a Flutter application (insurance & health domain), shipped to both the Google Play Store and Apple App Store
 - Developed Mobile Sales Force Automation (MSFA) applications with a live location tracking feature
 - Set up deployment workflows and CI/CD pipelines for reliable production releases
@@ -82,10 +89,11 @@ MonstarHacks 2024 champion.
 - Applied security hardening: ProGuard/R8, BuildConfig, NDK-based key protection
 
 ## Selected Projects
-- **Telecom + Lifestyle Super App** (Brain Station 23) — Bangladesh's largest telecom & lifestyle super app, 23M+ MAU. Built/scaled Android features in a multi-module production environment; cut critical feature load time ~50% while holding 99.3% crash-free. *Kotlin, Compose, Clean Architecture.*
+- **NID Wallet** (Dynamic Solution Innovators) — National digital identity wallet for a very large user base with the highest security requirements. Implemented hardware-backed attestation to verify device and key integrity and harden the app against tampering. *Hardware Attestation, Security, Android.*
+- **MyGP** (Brain Station 23) — Bangladesh's largest telecom & lifestyle super app, 23M+ MAU. Built/scaled Android features in a multi-module production environment; cut critical feature load time ~50% while holding 99.3% crash-free. *Kotlin, Compose, Clean Architecture.*
 - **Mitsukoshi Isetan** (Monstarlab) — Global retail app; delivered real-time chat and audio/video calling via the Twilio SDK for a worldwide user base, ~99% crash-free. *Twilio SDK, Android, iOS, Real-time.*
-- **Health & Insurance App** (Brain Station 23) — End-to-end Flutter app, shipped and maintained on Play Store and App Store. *Flutter, BLoC, Drift, Freezed.*
-- **Gamified Rewards Platform** (IOTA Infotech) — Digital rewards platform (spin wheel, daily login, membership tiers) with server-driven UI and NDK-based security hardening. *Android, Server-driven UI, ProGuard/R8.*
+- **Shanta Life Insurance** (Brain Station 23) — End-to-end Flutter app in the insurance & health domain, shipped and maintained on Play Store and App Store. *Flutter, BLoC, Drift, Freezed.*
+- **Goubba** (IOTA Infotech) — Gamified digital rewards platform (spin wheel, daily login, membership tiers) with server-driven UI and NDK-based security hardening. *Android, Server-driven UI, ProGuard/R8.*
 
 ## Awards & Recognition
 - **MonstarHacks 2024 Champion** — AWS-partnered hackathon
